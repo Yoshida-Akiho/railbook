@@ -61,7 +61,9 @@ class BooksController < ApplicationController
     end
   end
 
+
   def search
+    @kensaku = params["search"]["title"]
     @books = Book.where(title: params["search"]["title"])
     render :index
   end
