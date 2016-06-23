@@ -18,6 +18,8 @@
       <option value="2">翔泳社</option>  
 </select>  
 
+<%= collection_select(:book, :publish, Book.all, :id, :publish) %>
+
 <%= link_to "出雲商業","http://www.shimanet.ed.jp/izusho/" %> 
 
 <%= image_tag 'ame.jpg' %>
