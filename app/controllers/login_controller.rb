@@ -16,7 +16,8 @@ class LoginController < ApplicationController
       session[:usr] = usr.id
       session[:usrn] = usr.username
       #指定のリダイレクト先へ移動
-      redirect_to params[:referer]
+      #redirect_to params[:referer]
+      redirect_to books_url
     else
       flash.now[:referer] = params[:referer]
       @error = 'ユーザーID/パスワードが間違っています。'
